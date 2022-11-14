@@ -15,6 +15,16 @@
 </header>
 
 <body>
+
+    <div class= "card timer">
+        <div class = "timer-text">
+        <div class="large-font timer-count">10</div>
+        <h2>seconds remaining</h2>
+      </div>
+    
+      </div>
+    </div>
+
     <div class="panel">
         <div class="result">
   
@@ -32,16 +42,22 @@
             <button class="option" id="op4">option4</button>
         </div>
         <div class="navigation">
-            <button class="evaluate">Evaluate</button>
+            <button class="start">Start</button>
             <button class="next">Next</button>
         </div>
     </div>
+    <section>
+        <div class="card results">
+            <div class = "win-loss-container">
+            <div>
+            <h2>Wins: <span class="win">0 </span> </h2>
+            <h2>Losses: <span class="lose">0</span></h2>
+          </div>
+          <button class="reset-button">Reset Score</button>
+        </div>
+        </section>
+    </section>
     <script src="script.js"></script> 
-  <main> 
-    <div id="quiz"></div>
-    <button id="submit">Get Results</button>
-    <div id="results"></div>
-</main>
-
+  
 </body>
 </html>

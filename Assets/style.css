@@ -47,7 +47,7 @@ body{
     margin: 10px;
     padding: 5px;
     width: 80vw;
-    height: 20vh;
+    height: 3-vh;
     background-color: #9eb1b3;   
         
 }
@@ -60,7 +60,7 @@ body{
     border-radius: 25%;
 }
 .option:hover{
-    background-color: lightgoldenrodyellow;
+    background-color: whitesmoke;
 }
 .navigation{
     width: 80vw;
@@ -72,17 +72,25 @@ body{
     background-color:#c7dddf;
 }
   
-.evaluate,.next{
+.start, .next {
     width:30vw;
     height: 8vh;
     padding: 5px;
     font-size: larger;
+    background-color: #9eb1b3;
 }
-.evaluate{
-    
+
+.start{
+    color: white;
     background-color: #5065db;
 }
+
 .next{
     color: white;
     background-color: #BF3325;
+}
+
+.timer-text {
+    padding-bottom: 0px;
+    
 }
