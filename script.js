@@ -1,6 +1,6 @@
 var viewHighScore = document.querySelector(".view-highscore");
 var result = document.querySelector(".result");
-var question = document.querySelector("#question");
+var displayQuestion = document.querySelector("#question");
 var resetButton = document.querySelector(".reset-button");
 var timerElement = document.querySelector(".timer-count");
 var win = document.querySelector(".win");
@@ -11,12 +11,13 @@ var opt2 = document.querySelector("#opt2");
 var opt3 = document.querySelector("#opt3");
 var opt4 = document.querySelector("#opt4");
 
-
+var index = 0;
 var choseOption = "";
 var winCounter = 0;
 var loseCounter = 0;
 var isWin = false;
 var timer;
+var rightAnswer = "";
 var timerCount;
 var question = [{question: "what does javascript do?", choices: ["Design", "creates images", "structures a webpage", "makes things work"],
  rightAnswer: "makes things work"},
@@ -39,6 +40,7 @@ function startGame() {
     timerCount = 10;
     start.disabled = true;
     startTimer()
+    loadQuestion()
     setWins()
 }
 
@@ -75,5 +77,11 @@ function startTimer() {
     }
   }, 1000);
 }
+ function loadQuestion() {
+    displayQuestion.innerText = question[index].question
+    console.log(question[0].choices)
+  opt1.innerText = question[index].choices[0]
+opt2.innerText = question[index].choices[1]
 
+ }
 start.addEventListener("click", startGame)
