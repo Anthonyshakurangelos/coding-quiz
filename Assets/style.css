@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 main,
 div, 
 button
@@ -10,13 +16,15 @@ button
 }
 
 body{
+    display: block;
     padding: 0;
     margin: 0;    
     width:80vw;
-    height: 90vh;    
+    height: 90vh;   
+    background-color: black; 
 }
 .panel{
-    height: 100vh;
+    height: 0vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,8 +43,8 @@ body{
 .result{
     margin: 10px;
     padding: 5px;
-    width:80vw;
-    height: 10vh;
+    width:10vw;
+    height: 5vh;
     text-align: center;
     font-size: 50px;
       
@@ -58,6 +66,7 @@ body{
     font-size: larger;
     background-color: lightskyblue;
     border-radius: 25%;
+    display: flex;
 }
 .option:hover{
     background-color: whitesmoke;
@@ -91,6 +100,7 @@ body{
 }
 
 .timer-text {
-    padding-top: 110px;
+    padding-top: 0px;
+    height: 10px;
     text-align: center;
 }
