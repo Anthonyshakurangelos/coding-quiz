@@ -89,12 +89,12 @@ body{
     background-color: #9eb1b3;
 }
 
-.start{
+.start:hover{
     color: white;
     background-color: #5065db;
 }
 
-.next{
+.next:hover{
     color: white;
     background-color: #BF3325;
 }
@@ -103,4 +103,7 @@ body{
     padding-top: 0px;
     height: 10px;
     text-align: center;
+}
+.save-score-button {
+    margin-top: 50px;
 }
