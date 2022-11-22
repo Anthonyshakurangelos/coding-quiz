@@ -14,7 +14,7 @@ var opt4 = document.querySelector("#opt4");
 var optionButton = document.querySelectorAll(".option-container")
 
 var gameOver;
-var score = 0;
+var score = 'your score';
 var index = 0;
 var winCount = 0;
 var loseCount = 0;
@@ -79,7 +79,7 @@ function startTimer() {
     if (timerCount === 0) {
        // if(Win && timerCount > 0) {
             clearInterval(timer);
-            timerElement.innerHTML = ""
+            timerElement.innerHTML = "Game over!"
            // winGame();
        // }
     }
@@ -103,27 +103,26 @@ function startTimer() {
  }
  function initialsPage() {
   document.querySelector(".panel").innerHTML = ""
-  let finalScorediv = document.createElement("div")
-  finalScorediv.innerHTML = `your final score is ${finalTime}`
-  let initialsdiv = document.createElement("div")
-  initialsdiv.style.display = "flex"
+  let finalScoreDiv = document.createElement("div")
+  finalScoreDiv.innerHTML = `your final score is ${finalTime}`
+  let initialsDiv = document.createElement("div")
+  initialsDiv.style.display = "flex"
   let message_para = document.createElement("p")
-  message_para.innerHTML = "enter your name";
+  message_para.innerHTML = "enter your initials here";
   let inputEl = document.createElement("input")
-  initialsdiv.append(message_para, inputEl)
-  let submitbtn = document.createElement("button")
-  submitbtn.innerHTML = "submit score"
-  document.querySelector(".panel").append(finalScorediv, initialsdiv,submitbtn)
+  initialsDiv.append(message_para, inputEl)
+  let submitBtn = document.createElement("button")
+  submitBtn.innerHTML = "submit score"
+  document.querySelector(".panel").append(finalScoreDiv, initialsDiv, submitBtn)
 
  }
  function nextQuestion() {
     console.log(index)
   if (index < 3){
-
     index++
     loadQuestion()
   } else {
-    finalTime = timerCount
+    finalTime === timerCount
     initialsPage()
   } 
  }
@@ -149,13 +148,9 @@ function startTimer() {
      
     }
     
-    function gameOver() {
-      if (timerCount==0 && question[3].choices ) {
-         
-      }
-    }
-   // need to display results and be able to save with initials 
- // once all questions are answered or timer is 0 then 
+   
+   // need to display results correctly 
+ // once all questions are answered or timer is 0 then game over
  
 start.addEventListener("click", startGame)
 next.addEventListener("click", nextQuestion)
@@ -163,5 +158,6 @@ opt1.addEventListener("click", optionChoice)
 opt2.addEventListener("click", optionChoice)
 opt3.addEventListener("click", optionChoice)
 opt4.addEventListener("click", optionChoice)
-saveButton.addEventListener("click", saveResults)
-// fix timer and log score in view high score and log high score with 
+submitBtn.addEventListener("click", saveResults)
+// log score with initials to local storage
+//
