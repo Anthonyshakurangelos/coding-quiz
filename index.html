@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Code Quiz | FUN </title>
+        <link rel="stylesheet" href="./Assets/style.css">
+    </head>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
-</head>
-<header>
-    <div class="card timer">
-        <div class="timer-text">
-            <div class="large-font timer-count">20</div>
-            <!-- // <h2>seconds remaining</h2> -->
+    <body> 
+
+        <header>
+            <h4 id="view-high-scores">View High Scores</h4> 
+            <h4 class="timer">Time: <span id="timer"></span></h4>
+        </header>
+
+        <div id="starter-container" class="show">
+            <div class="container start">
+                <h1>Coding Quiz Challenge</h1>  
+               
+                <button class="btn startend" id="start-game">Start Quiz</button>
+            </div>    
         </div>
-</header>
 
-
-<body>
-    <div class="panel">
-         <div class="result"> 
-
-           </div>
-        </div>
-        <div class="question-container" id="question">
-            
-        </div>
-        <div class="option-container">
-            <button class="option" id="opt1"> </button>
-
-            <button class="option" id="opt2"> </button>
-
-            <button class="option" id="opt3"> </button>
-
-            <button class="option" id="opt4"> </button>
-        </div>
-        <div class="navigation">
-            <button class="start">Start</button>
-            <button class="next">Next</button>
-        </div>
-    </div>
-
-    </div>
-    <section>
-        <div class="card results">
-            <div class="win-loss-container">
-                <div>
-                    <h2>Wins: <span class="win">0 </span> </h2>
-                    <h2>Losses: <span class="lose">0</span></h2>
-                </div>
-                <!-- <button class="save-score-button">Save high score</button> -->
+        <div id="question-container" class="hide">
+            <div class="container questions">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid"></div>
             </div>
-    </section>
-    </section>
-    <script src="script.js"></script>
+        </div>
 
+        <div id="end-container" class="hide">
+           <div class="container end">
+            <div id=score-banner>
+                <h1>Game Over!</h1>
+            </div>  
+            <form id="initials-form" class="initials">
+              <p> Enter Initials:
+                <input type="text" name="initials" id="initials" class="text-input" />
+                <button class="btn startend" id="sumbit-score" type="submit">Submit</button> </p>
+              </form>
+            </div>
+        </div>
+
+        <div id="high-score-container" class="hide">
+          <div class="high-scores container">
+            <h1 class="high-score">High Scores</h1>
+            <ol id="high-score-list" class="score-list"></ol>
+        <div>
+            <button class="btn" id="go-back">Go back</button>
+            <button class="btn" id="clear-high-scores">Clear high scores</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="hide" id="correct">
+        <h2>Correct :)!</h2>
+    </div>
+    <div class="hide" id="wrong">
+        <h2>Wrong :( </h2>
+    </div>
+
+    <script src="./Assets/script.js"></script> 
 </body>
-
 </html>
